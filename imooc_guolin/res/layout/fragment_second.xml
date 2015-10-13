@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#99ffcc" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第二页"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/btn_PhotoWall"
+        style="@style/btn_style"
+        android:text="PhotoWall" />
+    <Button
+        android:id="@+id/btn_PhotoWallFull"
+        style="@style/btn_style"
+        android:text="PhotoWallFull" />
+    <Button
+        android:id="@+id/btn_fragment"
+        style="@style/btn_style"
+        android:text="Fragment" />
+</LinearLayout>
