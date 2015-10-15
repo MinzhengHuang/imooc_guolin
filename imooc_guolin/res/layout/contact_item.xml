@@ -31,7 +31,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:src="@drawable/icon" />
+            android:src="@drawable/hmz" />
 
         <TextView
             android:id="@+id/name"
