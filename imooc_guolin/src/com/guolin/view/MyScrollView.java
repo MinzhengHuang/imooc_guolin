@@ -1,17 +1,5 @@
 package com.guolin.view;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -35,6 +23,18 @@ import com.guolin.R;
 import com.guolin.utils.ImageLoader;
 import com.guolin.utils.Images;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * 自定义的ScrollView，在其中动态地对图片进行添加。
  * 
@@ -42,14 +42,10 @@ import com.guolin.utils.Images;
  */
 public class MyScrollView extends ScrollView implements OnTouchListener {
 
-	/**
-	 * 每页要加载的图片数量
-	 */
+	/** 每页要加载的图片数量 */
 	public static final int PAGE_SIZE = 15;
 
-	/**
-	 * 记录当前已加载到第几页
-	 */
+	/** 记录当前已加载到第几页 */
 	private int page;
 
 	/**

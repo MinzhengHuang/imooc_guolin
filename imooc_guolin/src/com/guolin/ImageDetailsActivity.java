@@ -1,7 +1,5 @@
 package com.guolin;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +17,8 @@ import android.widget.TextView;
 import com.guolin.utils.Images;
 import com.guolin.view.ZoomImageView;
 
+import java.io.File;
+
 /**
  * 查看大图的Activity界面。
  * 
@@ -27,14 +27,10 @@ import com.guolin.view.ZoomImageView;
 public class ImageDetailsActivity extends Activity implements
 		OnPageChangeListener {
 
-	/**
-	 * 用于管理图片的滑动
-	 */
+	/** 用于管理图片的滑动*/
 	private ViewPager viewPager;
 
-	/**
-	 * 显示当前图片的页数
-	 */
+	/** 显示当前图片的页数*/
 	private TextView pageText;
 
 	@Override
@@ -106,8 +102,7 @@ public class ImageDetailsActivity extends Activity implements
 	private String getImagePath(String imageUrl) {
 		int lastSlashIndex = imageUrl.lastIndexOf("/");
 		String imageName = imageUrl.substring(lastSlashIndex + 1);
-		String imageDir = Environment.getExternalStorageDirectory().getPath()
-				+ "/PhotoWallFalls/";
+		String imageDir = Environment.getExternalStorageDirectory().getPath()+ "/PhotoWallFalls/";
 		File file = new File(imageDir);
 		if (!file.exists()) {
 			file.mkdirs();

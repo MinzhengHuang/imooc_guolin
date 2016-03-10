@@ -17,29 +17,19 @@ import android.view.View;
  */
 public class Image3DView extends View {
 
-	/**
-	 * 源视图，用于生成图片对象。
-	 */
+	/** 源视图，用于生成图片对象。*/
 	private View sourceView;
 
-	/**
-	 * 根据传入的源视图生成的图片对象。
-	 */
+	/** 根据传入的源视图生成的图片对象。*/
 	private Bitmap sourceBitmap;
 
-	/**
-	 * 源视图的宽度。
-	 */
+	/** 源视图的宽度。*/
 	private float sourceWidth;
 
-	/**
-	 * Matrix对象，用于对图片进行矩阵操作。
-	 */
+	/** Matrix对象，用于对图片进行矩阵操作。*/
 	private Matrix matrix = new Matrix();
 
-	/**
-	 * Camera对象，用于对图片进行三维操作。
-	 */
+	/** Camera对象，用于对图片进行三维操作。*/
 	private Camera camera = new Camera();
 
 	/**

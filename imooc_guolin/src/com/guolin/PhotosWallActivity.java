@@ -15,14 +15,10 @@ import com.guolin.utils.Images;
  */
 public class PhotosWallActivity extends Activity {
 
-	/**
-	 * 用于展示照片墙的GridView
-	 */
+	/** 用于展示照片墙的GridView */
 	private GridView mPhotoWall;
 
-	/**
-	 * GridView的适配器
-	 */
+	/** GridView的适配器 */
 	private PhotoWallAdapter mAdapter;
 
 	private int mImageThumbSize;
@@ -45,15 +41,13 @@ public class PhotosWallActivity extends Activity {
 					
 					@Override
 					public void onGlobalLayout() {
-						final int numColumns = (int) Math.floor(mPhotoWall
-								.getWidth()
+						final int numColumns = (int) Math.floor(mPhotoWall.getWidth()
 								/ (mImageThumbSize + mImageThumbSpacing));
 						if (numColumns > 0) {
 							int columnWidth = (mPhotoWall.getWidth() / numColumns)
 									- mImageThumbSpacing;
 							mAdapter.setItemHeight(columnWidth);
-							mPhotoWall.getViewTreeObserver()
-									.removeGlobalOnLayoutListener(this);
+							mPhotoWall.getViewTreeObserver().removeGlobalOnLayoutListener(this);
 						}
 					}
 				});

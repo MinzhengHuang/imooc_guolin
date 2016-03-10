@@ -1,8 +1,5 @@
 package com.guolin;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.database.Cursor;
 import android.net.Uri;
@@ -21,9 +18,11 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.guolin.R;
 import com.guolin.adapter.ContactAdapter;
 import com.guolin.data.Contact;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 主界面，联系人列表界面。
@@ -32,59 +31,37 @@ import com.guolin.data.Contact;
  */
 public class ContactsActivity extends Activity {
 
-	/**
-	 * 分组的布局
-	 */
+	/** 分组的布局 */
 	private LinearLayout titleLayout;
 
-	/**
-	 * 弹出式分组的布局
-	 */
+	/** 弹出式分组的布局 */
 	private RelativeLayout sectionToastLayout;
 
-	/**
-	 * 右侧可滑动字母表
-	 */
+	/** 右侧可滑动字母表 */
 	private Button alphabetButton;
 
-	/**
-	 * 分组上显示的字母
-	 */
+	/** 分组上显示的字母 */
 	private TextView title;
 
-	/**
-	 * 弹出式分组上的文字
-	 */
+	/** 弹出式分组上的文字 */
 	private TextView sectionToastText;
 
-	/**
-	 * 联系人ListView
-	 */
+	/** 联系人ListView */
 	private ListView contactsListView;
 
-	/**
-	 * 联系人列表适配器
-	 */
+	/** 联系人列表适配器 */
 	private ContactAdapter adapter;
 
-	/**
-	 * 用于进行字母表分组
-	 */
+	/** 用于进行字母表分组 */
 	private AlphabetIndexer indexer;
 
-	/**
-	 * 存储所有手机中的联系人
-	 */
+	/** 存储所有手机中的联系人 */
 	private List<Contact> contacts = new ArrayList<Contact>();
 
-	/**
-	 * 定义字母表的排序规则
-	 */
+	/** 定义字母表的排序规则 */
 	private String alphabet = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	/**
-	 * 上次第一个可见元素，用于滚动时记录标识。
-	 */
+	/** 上次第一个可见元素，用于滚动时记录标识。*/
 	private int lastFirstVisibleItem = -1;
 
 	@Override
@@ -128,6 +105,7 @@ public class ContactsActivity extends Activity {
 		contactsListView.setOnScrollListener(new OnScrollListener() {
 			@Override
 			public void onScrollStateChanged(AbsListView view, int scrollState) {
+
 			}
 
 			@Override

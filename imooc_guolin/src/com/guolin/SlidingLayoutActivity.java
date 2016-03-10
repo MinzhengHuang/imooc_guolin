@@ -11,34 +11,23 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.guolin.R;
 import com.guolin.view.SlidingLayout;
 
 public class SlidingLayoutActivity extends Activity {
 
-	/**
-	 * 侧滑布局对象，用于通过手指滑动将左侧的菜单布局进行显示或隐藏。
-	 */
+	/** 侧滑布局对象，用于通过手指滑动将左侧的菜单布局进行显示或隐藏。*/
 	private SlidingLayout slidingLayout;
 
-	/**
-	 * menu按钮，点击按钮展示左侧布局，再点击一次隐藏左侧布局。
-	 */
+	/** menu按钮，点击按钮展示左侧布局，再点击一次隐藏左侧布局。*/
 	private Button menuButton;
 
-	/**
-	 * 放在content布局中的ListView。
-	 */
+	/** 放在content布局中的ListView。*/
 	private ListView contentListView;
 
-	/**
-	 * 作用于contentListView的适配器。
-	 */
+	/** 作用于contentListView的适配器。*/
 	private ArrayAdapter<String> contentListAdapter;
 
-	/**
-	 * 用于填充contentListAdapter的数据源。
-	 */
+	/** 用于填充contentListAdapter的数据源。*/
 	private String[] contentItems = { "Content Item 1", "Content Item 2", "Content Item 3",
 			"Content Item 4", "Content Item 5", "Content Item 6", "Content Item 7",
 			"Content Item 8", "Content Item 9", "Content Item 10", "Content Item 11",

@@ -15,119 +15,73 @@ import android.view.View;
  */
 public class ZoomImageView extends View {
 
-	/**
-	 * 初始化状态常量
-	 */
+	/** 初始化状态常量 */
 	public static final int STATUS_INIT = 1;
 
-	/**
-	 * 图片放大状态常量
-	 */
+	/** 图片放大状态常量 */
 	public static final int STATUS_ZOOM_OUT = 2;
 
-	/**
-	 * 图片缩小状态常量
-	 */
+	/** 图片缩小状态常量 */
 	public static final int STATUS_ZOOM_IN = 3;
 
-	/**
-	 * 图片拖动状态常量
-	 */
+	/** 图片拖动状态常量 */
 	public static final int STATUS_MOVE = 4;
 
-	/**
-	 * 用于对图片进行移动和缩放变换的矩阵
-	 */
+	/** 用于对图片进行移动和缩放变换的矩阵 */
 	private Matrix matrix = new Matrix();
 
-	/**
-	 * 待展示的Bitmap对象
-	 */
+	/** 待展示的Bitmap对象 */
 	private Bitmap sourceBitmap;
 
-	/**
-	 * 记录当前操作的状态，可选值为STATUS_INIT、STATUS_ZOOM_OUT、STATUS_ZOOM_IN和STATUS_MOVE
-	 */
+	/** 记录当前操作的状态，可选值为STATUS_INIT、STATUS_ZOOM_OUT、STATUS_ZOOM_IN和STATUS_MOVE */
 	private int currentStatus;
 
-	/**
-	 * ZoomImageView控件的宽度
-	 */
+	/** ZoomImageView控件的宽度 */
 	private int width;
 
-	/**
-	 * ZoomImageView控件的高度
-	 */
+	/** ZoomImageView控件的高度 */
 	private int height;
 
-	/**
-	 * 记录两指同时放在屏幕上时，中心点的横坐标值
-	 */
+	/** 记录两指同时放在屏幕上时，中心点的横坐标值 */
 	private float centerPointX;
 
-	/**
-	 * 记录两指同时放在屏幕上时，中心点的纵坐标值
-	 */
+	/** 记录两指同时放在屏幕上时，中心点的纵坐标值 */
 	private float centerPointY;
 
-	/**
-	 * 记录当前图片的宽度，图片被缩放时，这个值会一起变动
-	 */
+	/** 记录当前图片的宽度，图片被缩放时，这个值会一起变动 */
 	private float currentBitmapWidth;
 
-	/**
-	 * 记录当前图片的高度，图片被缩放时，这个值会一起变动
-	 */
+	/** 记录当前图片的高度，图片被缩放时，这个值会一起变动 */
 	private float currentBitmapHeight;
 
-	/**
-	 * 记录上次手指移动时的横坐标
-	 */
+	/** 记录上次手指移动时的横坐标 */
 	private float lastXMove = -1;
 
-	/**
-	 * 记录上次手指移动时的纵坐标
-	 */
+	/** 记录上次手指移动时的纵坐标 */
 	private float lastYMove = -1;
 
-	/**
-	 * 记录手指在横坐标方向上的移动距离
-	 */
+	/** 记录手指在横坐标方向上的移动距离 */
 	private float movedDistanceX;
 
-	/**
-	 * 记录手指在纵坐标方向上的移动距离
-	 */
+	/** 记录手指在纵坐标方向上的移动距离 */
 	private float movedDistanceY;
 
-	/**
-	 * 记录图片在矩阵上的横向偏移值
-	 */
+	/** 记录图片在矩阵上的横向偏移值 */
 	private float totalTranslateX;
 
-	/**
-	 * 记录图片在矩阵上的纵向偏移值
-	 */
+	/** 记录图片在矩阵上的纵向偏移值 */
 	private float totalTranslateY;
 
-	/**
-	 * 记录图片在矩阵上的总缩放比例
-	 */
+	/** 记录图片在矩阵上的总缩放比例 */
 	private float totalRatio;
 
-	/**
-	 * 记录手指移动的距离所造成的缩放比例
-	 */
+	/** 记录手指移动的距离所造成的缩放比例 */
 	private float scaledRatio;
 
-	/**
-	 * 记录图片初始化时的缩放比例
-	 */
+	/** 记录图片初始化时的缩放比例 */
 	private float initRatio;
 
-	/**
-	 * 记录上次两指之间的距离
-	 */
+	/** 记录上次两指之间的距离 */
 	private double lastFingerDis;
 
 	/**

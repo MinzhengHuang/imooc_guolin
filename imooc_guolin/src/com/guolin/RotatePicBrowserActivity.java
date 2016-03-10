@@ -1,8 +1,5 @@
 package com.guolin;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,10 +14,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.guolin.R;
 import com.guolin.adapter.PictureAdapter;
 import com.guolin.data.Picture;
 import com.guolin.data.Rotate3dAnimation;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 图片浏览器的主Activity。
@@ -29,29 +28,19 @@ import com.guolin.data.Rotate3dAnimation;
  */
 public class RotatePicBrowserActivity extends Activity {
 
-	/**
-	 * 根布局
-	 */
+	/** 根布局 */
 	private RelativeLayout layout;
 
-	/**
-	 * 用于展示图片列表的ListView
-	 */
+	/** 用于展示图片列表的ListView */
 	private ListView picListView;
 
-	/**
-	 * 用于展示图片详细的ImageView
-	 */
+	/** 用于展示图片详细的ImageView */
 	private ImageView picture;
 
-	/**
-	 * 图片列表的适配器
-	 */
+	/** 图片列表的适配器 */
 	private PictureAdapter adapter;
 
-	/**
-	 * 存放所有图片的集合
-	 */
+	/** 存放所有图片的集合 */
 	private List<Picture> picList = new ArrayList<Picture>();
 
 	@Override
@@ -67,6 +56,7 @@ public class RotatePicBrowserActivity extends Activity {
 		adapter = new PictureAdapter(this, 0, picList);
 		picListView.setAdapter(adapter);
 		picListView.setOnItemClickListener(new OnItemClickListener() {
+
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				// 当点击某一子项时，将ImageView中的图片设置为相应的资源
@@ -88,6 +78,7 @@ public class RotatePicBrowserActivity extends Activity {
 			}
 		});
 		picture.setOnClickListener(new OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				// 获取布局的中心点位置，作为旋转的中心点
@@ -122,17 +113,17 @@ public class RotatePicBrowserActivity extends Activity {
 		picList.add(greatWall);
 		Picture waterFall = new Picture("Water Fall", R.drawable.water_fall);
 		picList.add(waterFall);
+
 	}
 
 	/**
 	 * 注册在ListView点击动画中的动画监听器，用于完成ListView的后续动画。
-	 * 
-	 * @author guolin
 	 */
 	class TurnToImageView implements AnimationListener {
 
 		@Override
 		public void onAnimationStart(Animation animation) {
+
 		}
 
 		/**
@@ -161,19 +152,19 @@ public class RotatePicBrowserActivity extends Activity {
 
 		@Override
 		public void onAnimationRepeat(Animation animation) {
+
 		}
 
 	}
 
 	/**
 	 * 注册在ImageView点击动画中的动画监听器，用于完成ImageView的后续动画。
-	 * 
-	 * @author guolin
 	 */
 	class TurnToListView implements AnimationListener {
 
 		@Override
 		public void onAnimationStart(Animation animation) {
+
 		}
 
 		/**
@@ -202,6 +193,7 @@ public class RotatePicBrowserActivity extends Activity {
 
 		@Override
 		public void onAnimationRepeat(Animation animation) {
+
 		}
 
 	}

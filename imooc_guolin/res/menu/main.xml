@@ -23,12 +23,6 @@
         android:icon="@drawable/menu_feedback_icon"
         android:title="@string/menu_feedback"/>
     <item
-        android:id="@+id/action_search"
-        android:actionViewClass="android.widget.SearchView"
-        android:icon="@drawable/actionbar_search_icon"
-        android:showAsAction="ifRoom|collapseActionView"
-        android:title="@string/action_search"/>
-    <item
         android:id="@+id/action_plus"
         android:actionProviderClass="com.example.wechatsample.PlusActionProvider"
         android:icon="@drawable/actionbar_add_icon"

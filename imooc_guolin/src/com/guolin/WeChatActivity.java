@@ -1,8 +1,5 @@
 package com.guolin;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,11 +13,13 @@ import android.view.Menu;
 import android.view.ViewConfiguration;
 import android.view.Window;
 
-import com.guolin.R;
 import com.guolin.fragment.ChatFragment;
 import com.guolin.fragment.ContactsFragment;
 import com.guolin.fragment.FoundFragment;
 import com.guolin.view.PagerSlidingTabStrip;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * 高仿微信的主界面
@@ -31,29 +30,19 @@ import com.guolin.view.PagerSlidingTabStrip;
  */
 public class WeChatActivity extends FragmentActivity {
 
-    /**
-     * 聊天界面的Fragment
-     */
+    /** 聊天界面的Fragment */
     private ChatFragment chatFragment;
 
-    /**
-     * 发现界面的Fragment
-     */
+    /** 发现界面的Fragment */
     private FoundFragment foundFragment;
 
-    /**
-     * 通讯录界面的Fragment
-     */
+    /** 通讯录界面的Fragment */
     private ContactsFragment contactsFragment;
 
-    /**
-     * PagerSlidingTabStrip的实例
-     */
+    /** PagerSlidingTabStrip的实例 */
     private PagerSlidingTabStrip tabs;
 
-    /**
-     * 获取当前屏幕的密度
-     */
+    /** 获取当前屏幕的密度 */
     private DisplayMetrics dm;
 
     @Override

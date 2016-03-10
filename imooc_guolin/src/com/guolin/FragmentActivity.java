@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.guolin.fragment.ContactFragment;
-import com.guolin.fragment.ContactsFragment;
 import com.guolin.fragment.MessageFragment;
 import com.guolin.fragment.NewsFragment;
 import com.guolin.fragment.SettingFragment;
@@ -24,89 +23,55 @@ import com.guolin.fragment.SettingFragment;
  */
 public class FragmentActivity extends Activity implements OnClickListener {
 
-	/**
-	 * 用于展示消息的Fragment
-	 */
+	/** 用于展示消息的Fragment */
 	private MessageFragment messageFragment;
 
-	/**
-	 * 用于展示联系人的Fragment
-	 */
+	/** 用于展示联系人的Fragment */
 	private ContactFragment contactsFragment;
 
-	/**
-	 * 用于展示动态的Fragment
-	 */
+	/** 用于展示动态的Fragment */
 	private NewsFragment newsFragment;
 
-	/**
-	 * 用于展示设置的Fragment
-	 */
+	/** 用于展示设置的Fragment */
 	private SettingFragment settingFragment;
 
-	/**
-	 * 消息界面布局
-	 */
+	/** 消息界面布局 */
 	private View messageLayout;
 
-	/**
-	 * 联系人界面布局
-	 */
+	/** 联系人界面布局 */
 	private View contactsLayout;
 
-	/**
-	 * 动态界面布局
-	 */
+	/** 动态界面布局 */
 	private View newsLayout;
 
-	/**
-	 * 设置界面布局
-	 */
+	/** 设置界面布局 */
 	private View settingLayout;
 
-	/**
-	 * 在Tab布局上显示消息图标的控件
-	 */
+	/** 在Tab布局上显示消息图标的控件 */
 	private ImageView messageImage;
 
-	/**
-	 * 在Tab布局上显示联系人图标的控件
-	 */
+	/** 在Tab布局上显示联系人图标的控件 */
 	private ImageView contactsImage;
 
-	/**
-	 * 在Tab布局上显示动态图标的控件
-	 */
+	/** 在Tab布局上显示动态图标的控件 */
 	private ImageView newsImage;
 
-	/**
-	 * 在Tab布局上显示设置图标的控件
-	 */
+	/** 在Tab布局上显示设置图标的控件 */
 	private ImageView settingImage;
 
-	/**
-	 * 在Tab布局上显示消息标题的控件
-	 */
+	/** 在Tab布局上显示消息标题的控件 */
 	private TextView messageText;
 
-	/**
-	 * 在Tab布局上显示联系人标题的控件
-	 */
+	/** 在Tab布局上显示联系人标题的控件 */
 	private TextView contactsText;
 
-	/**
-	 * 在Tab布局上显示动态标题的控件
-	 */
+	/** 在Tab布局上显示动态标题的控件 */
 	private TextView newsText;
 
-	/**
-	 * 在Tab布局上显示设置标题的控件
-	 */
+	/** 在Tab布局上显示设置标题的控件 */
 	private TextView settingText;
 
-	/**
-	 * 用于对Fragment进行管理
-	 */
+	/** 用于对Fragment进行管理 */
 	private FragmentManager fragmentManager;
 
 	@Override
